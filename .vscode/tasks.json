@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Build (Debug)",
+      "command": "BUILD_TYPE=Debug ./build.sh",
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Debug build by custom shell script"
+    },
+    {
+      "type": "shell",
+      "label": "Build (Release)",
+      "command": "BUILD_TYPE=Release ./build.sh",
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "detail": "Release build by custom shell script"
+    },
+    {
+      "type": "shell",
+      "label": "Run tests (Debug)",
+      "command": "meson test --no-rebuild",
+      "options": { "cwd": "build" },
+      "dependsOn": ["Build (Debug)"],
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      },
+      "detail": "Run tests"
+    }
+  ]
+}
