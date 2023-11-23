@@ -4,9 +4,10 @@ subdir('libapp')
 
 app_sources = ['main.cpp']
 
-executable('main',
+executable('testapp',
     app_sources, 
-    dependencies : [fmt],
+    dependencies: [fmt],
     link_with: [libapp],
-    install : true
+    install: true,
+    install_dir: '/usr/local/apps' # override default install location 
 )

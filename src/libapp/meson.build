@@ -7,8 +7,8 @@ inc = include_directories('.')
 libapp = library('libapp',
     libapp_sources,
     include_directories : inc,
-    dependencies : [fmt],
-    install : true
+    dependencies : [fmt]
+
 )
 
 libapp_test = executable('doubler_test',
