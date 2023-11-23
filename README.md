@@ -3,7 +3,6 @@
 Minimal configuration for a C++ project for Linux with gcc.
 
 
-
 See `.vscode/tasks.json` for examples of how to build and run tests.  
 See `.vscode/launch.json` for examples of how to run the debugger using gdb.
 
@@ -15,6 +14,9 @@ See `.vscode/launch.json` for examples of how to run the debugger using gdb.
 - Build (Debug)
 - Build (Release)
 - Run tests (Debug)
+
+### Extensions
+Works out of the box with the extension [C++ TestMate](https://marketplace.visualstudio.com/items?itemName=matepek.vscode-catch2-test-adapter) which can be used to interactively run and debug tests.
 
 # Dependencies
 Make these available on your system.
